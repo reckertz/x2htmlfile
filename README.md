@@ -1,15 +1,15 @@
 # x2htmlfile
 Extract X- (Twitter) Tweets and export as HTML-File
 
-# []{#anchor}Chrome-Erweiterung \"x2htmlfile\"
+# Chrome-Erweiterung \"x2htmlfile\"
 
-## []{#anchor-1}Einführung
+## Einführung
 
 Diese Chrome-Erweiterung ermöglicht es Benutzern, Tweets sowohl aus der
 Konversations-Timeline als auch der Home-Timeline als HTML-Datei zu
 speichern und bereitzustellen.
 
-## []{#anchor-2}Installation
+## Installation
 
 Download der Erweiterung: Laden Sie die Erweiterung von \[Ihre Website
 oder GitHub-Repository\] herunter.
@@ -27,9 +27,9 @@ oder GitHub-Repository\] herunter.
         das Verzeichnis aus, in dem sich die Erweiterungsdateien
         befinden.
 
-## []{#anchor-3}Nutzung
+## Nutzung
 
-### []{#anchor-4}Funktionen
+### Funktionen
 
 x2htmlfile sichert angezeigte Tweets aus X (ehemals Twitter) und stellt
 sie als HTML-Datei zum Download aus dem Browser bereit.
@@ -43,7 +43,7 @@ Zu beachten ist dass x2htmlfile wie folgt vorgeht:
 -   der Nutzer kann dabei jederzeit die Bereitstellung der HTML-Datei
     oder den Abbruch des Blätterns veranlassen
 
-### []{#anchor-5}Schritt-für-Schritt Anleitung
+### Schritt-für-Schritt Anleitung
 
 -   Erweiterung aktivieren: Stellen Sie sicher, dass die Erweiterung
     aktiviert ist.
@@ -80,7 +80,7 @@ Zu beachten ist dass x2htmlfile wie folgt vorgeht:
     Moment, bis die laufenden Arbeiten ordnungsgemäß geschlossen werden,
     es erfolgt keine Bereitstellung einer HTML-Datei
 
-### []{#anchor-6}Eventuelle Probleme
+### Eventuelle Probleme
 
 -   Erweiterung funktioniert nicht: Stellen Sie sicher, dass der
     Entwicklermodus aktiviert ist und die Erweiterung korrekt
@@ -112,7 +112,7 @@ Zu beachten ist dass x2htmlfile wie folgt vorgeht:
     Browser nicht abgespielt werden -- weil z.B. nur ein Bild angezeigt
     wird, der Link dazu wird noch geprüft
 
-## []{#anchor-7}Technische Details
+## Technische Details
 
 x2htmlfile ist eine Chrome-Extension mit folgenden Komponenten:
 
@@ -192,10 +192,10 @@ Weitere Funktionen in content.js dienen den o.a. Hauptfunktionen:
     Funktion wird ersatzweise genutzt, weil es keine trivialen id's zu
     den HTML-Elementen gibt
 
-## []{#anchor-8}Lizenz
+## 
 
 MIT-Lizenz
 
-## []{#anchor-9}Kontakt
+## 
 
 Für weitere Informationen oder Support, kontaktieren Sie uns über Github
