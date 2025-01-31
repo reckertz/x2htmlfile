@@ -1,0 +1,17 @@
+{
+  "manifest_version": 3,
+  "name": "X-Thread to HTML-File",
+  "version": "1.0",
+  "description": "Extract Twitter Thread Articles and download as HTML-File",
+  "permissions": ["activeTab", "downloads"],
+  "host_permissions": ["https://*.x.com/*"],
+  "background": {},
+  "action": {
+    "default_popup": "popup.html",
+    "default_icon": "icon.png"
+  },
+  "content_scripts": [{
+    "matches": ["https://*.x.com/*"],
+    "js": ["content.js"]
+  }]
+}
