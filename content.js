@@ -6,7 +6,7 @@ let lastarticle = -1; // initialisierung: noch nichts passiert, Fortschreibung a
 let classrules = {};
 let classnorules = {};
 let hashcodes = new Set();
-let timelineDiv;
+let timelineDiv; 
 let stopRecording = false;
 let observer;
 let loopisactive = true;
@@ -62,7 +62,7 @@ chrome.runtime.onMessage.addListener((request, sender, sendResponse) => {
             let result = {
                 error: false,
                 message: "OK-canceled",
-                
+
             };
             console.log("sendResponse mit result");
             sendResponse({
@@ -113,7 +113,7 @@ function initAllGlobals() {
     hashcodes = new Set();
     timelineDiv;
     stopRecording = false;
-    observer;
+    observer = null;
     loopisactive = true;
 
     dofinal = false;
@@ -195,8 +195,13 @@ async function autoScroll() {
                 let news = [];
                 mutation.addedNodes.forEach(newnode => {
                     if (newnode.tagName === "DIV") {
+                        let hasclicked = checkButton(newnode);
+                        if (hasclicked === true) {
+                            return;
+                        }
                         let node = newnode.querySelector('article');
                         if (node === null) {
+                            // hier wird kein article gefunden, 
                             return;
                         }
                         let text = node.textContent;
@@ -338,6 +343,56 @@ async function autoScroll() {
     });
     return;
 } // function
+
+
+/**
+ * checkButton - check if button is present and has the "right text"
+ * @param {*} newnode 
+ * @returns hasclicked - true if click on button has been triggered
+ */
+function checkButton(newnode) {
+    // Prüfen auf Button
+    //hasclicked = checkButton(newnode);
+    let hasclicked = false;
+    let button = newnode.querySelector('button');
+    if (button !== null) {
+        port.postMessage({
+            text: "observer:" + "Button recognized: " + button.textContent
+        });
+        console.log(">>>observer:" + "Button*:" + button.textContent + "<<<");
+        let divtext = button.textContent;
+        if (divtext.length > 0) {
+            let specialtexts = ["Wahrscheinlichen Spam anzeigen", "Anzeigen"];
+            for (let i = 0; i < specialtexts.length; i++) {
+                let specialtext = specialtexts[i];
+                if (divtext.indexOf(specialtext) >= 0) {
+                    port.postMessage({
+                        text: "observer:" + "Div/Button recognized: " + divtext
+                    });
+                    console.log(">>>observer:" + "Div/Button:" + divtext + "<<<");
+                    const event = new Event("click", {
+                        bubbles: true,
+                        cancelable: true
+                    });
+                    button.dispatchEvent(event);
+                    hasclicked = true;
+                    let article = {
+                        origin: "observer",
+                        status: "closed",
+                        text: divtext,
+                        hashstring: calcHashString(divtext),
+                        node: newnode,
+                        html: "<b>clicked on:" + divtext + "</b>"
+                    };
+                    articles.push(article);
+                    break;
+                }
+            }
+        }
+    }
+    return hasclicked;
+}
+
 
 
 async function checkArticle(article) {

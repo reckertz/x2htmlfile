@@ -5,7 +5,7 @@ document.getElementById('startThread').addEventListener('click', () => {
     let list = document.getElementById("myList");
     while (list.firstChild) {
         list.removeChild(list.firstChild);
-    }
+    } 
     document.getElementById("startThread").disabled = true;
     document.getElementById("cancelThread").disabled = false;
     document.getElementById("finishThread").disabled = false;
@@ -92,7 +92,9 @@ document.getElementById('cancelThread').addEventListener('click', () => {
     });
 });
 
-document.getElementById('finishThread').addEventListener('click', () => {
+
+
+document.getElementById('finishThread').addEventListener('click', function () {
 
     document.getElementById("startThread").disabled = true;
     document.getElementById("cancelThread").disabled = true;

@@ -40,6 +40,8 @@ Zu beachten ist dass x2htmlfile wie folgt vorgeht:
     gesichert
 -   es werden alle Tweets, die vorhanden sind, durch automatisches
     Blättern angezeigt und dabei gesichert
+-   Wenn ein Button zu Span oder Anzeigen gefunden wird, dann wird
+    der Button automatisch geclicked     
 -   der Nutzer kann dabei jederzeit die Bereitstellung der HTML-Datei
     oder den Abbruch des Blätterns veranlassen
 
@@ -59,6 +61,8 @@ Zu beachten ist dass x2htmlfile wie folgt vorgeht:
     -   Es werden die Tweets durchgeblättert
     -   Im Browser wird die Anzeige jeweils automatisch aktualisiert
     -   Dazu wird ein Protokoll in der Anzeige von x2htmlfile ausgegeben
+    -   Es dürfen keine Clicks außerhalb der Extension erfolgen, da sonst
+        die Aufzeichnung abgebrochen wird und verloren geht.
 
 -   Clicken Sie auf „**Stop Recording and Download HTML-File**", dadurch
     wird die Aufzeichnung beendet und die Bereitstellung der HTML-Datei
