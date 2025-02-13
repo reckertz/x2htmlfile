@@ -2,7 +2,7 @@
   "manifest_version": 3,
   "name": "X-Thread to HTML-File",
   "version": "1.0",
-  "description": "Extract Twitter Thread Articles and download as HTML-File",
+  "description": "Extract X Twitter Thread Articles and download as HTML-File",
   "permissions": ["activeTab", "downloads"],
   "host_permissions": ["https://*.x.com/*"],
   "background": {},
