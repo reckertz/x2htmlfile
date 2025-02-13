@@ -40,7 +40,7 @@ Zu beachten ist dass x2htmlfile wie folgt vorgeht:
     gesichert
 -   es werden alle Tweets, die vorhanden sind, durch automatisches
     Blättern angezeigt und dabei gesichert
--   Wenn ein Button zu Span oder Anzeigen gefunden wird, dann wird
+-   Wenn ein Button zu Spam oder Anzeigen gefunden wird, dann wird
     der Button automatisch geclicked     
 -   der Nutzer kann dabei jederzeit die Bereitstellung der HTML-Datei
     oder den Abbruch des Blätterns veranlassen
@@ -100,12 +100,11 @@ Zu beachten ist dass x2htmlfile wie folgt vorgeht:
 <!-- -->
 
 -   **Button „Wahrscheinlichen Spam anzeigen"** -- der Button ist formal
-    nicht identifizierbar, die Betextung erfolgt in userspezifischer
-    Landessprache, das kann eine hohe Variation haben.
+    identifizierbar, die Betextung erfolgt in userspezifischer
+    Landessprache, realisiert nur für Deutsch.
 -   Anzeige „Weitere Antworten anzeigen, inklusive solcher, die
     beleidigende Inhalte enthalten können", darauf folgt ein** Button
-    „Anzeigen"** -- der Button ist formal nicht erkennbar, die Betextung
-    erfolgt in userspezifischer Landessprache
+    „Anzeigen"** -- der Button wird in deutscher Sprache erkannt und umgesetzt
 -   Der** Hinweis „Mehr anzeigen"** kann aus der Anzeige der HTML-Datei
     nicht aufgelöst werden, stattdessen kann entweder ein Bild
     angeclickt werden oder der Name, um auf den Artikel oder die
